@@ -1,0 +1,23 @@
+I want You to use everything that we had learned up to this moment. These tasks will require the use of structs, vectors and files.
+
+If You work on Windows, please download file wincities10k.zip, otherwise cities10k.zip. Extract it, see its contents. It is a collection of names of cities and their coordinates.
+
+It contains 10000 lines. Each line is has the following format:
+
+city_name latitude longitude
+
+city_name is a string, a single word (I have removed non-ascii characters, and converted spaces into underscore charactres).
+
+latitude and longitude are doubles.
+
+Firstly, I want to read the file. Create a struct City which will be able to hold the name and coordinates of each city. Afterwards, create a vector of City, and read the contents of the file into a vector of City. Read strings and doubles into the fields of a temporary City, and then push_back the city into the vector.
+
+Write a function which takes two City as an argument and returns an Euclidean distance between them (alternatively: add a distance method to City which takes another City as an argument and returns distance between the two cities). Write a program which reads two coordinates from the user and prints the name of the nearest city. Use the Euclidean distance as distance between two points. Maybe tell the user which direction to head to get there (East, West, North or South, North-East, North-West, South-West, South-East)?
+
+The cities10k.txt file holds only 10000 cities. Try the above on larger files: 100000 cities: wincities100k.zip, cities100k.zip, or a full list of 3168302 cities: wincities.zip, cities.zip. Try to notice how the time necessary to read and perform the check grows.
+
+Try to answer the following question: which two cities are farthest from each other in cities10k.txt or wincities10k.txt? Try it with an Euclidean distance. Notice that the Euclidean distance is a bad approximation of distance for this exercise, and try to use the haversine formula as the distance between cities.
+
+Try the same with the larger files. It might take a while to compute, be very patient.
+
+You may also want to try an write a few operators. For instance, try to write a >> operator for a Person which will read a person from the standard input. Please try to write a multiplication function for the mathematical vector (multiply a vector by a scalar).
